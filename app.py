@@ -2,10 +2,9 @@ import streamlit as st
 import pandas as pd
 import numpy as np
 import keras
-from keras.models import Sequential #used to initialize our ANN
-from keras.layers import Dense #used to make layers in ANN
-from keras.layers import Dropout
-import keras.backend.tensorflow_backend as tb
+from tensorflow.keras.models import Sequential #used to initialize our ANN
+from tensorflow.keras.layers import Dense #used to make layers in ANN
+from tensorflow.keras.layers import Dropout
 tb._SYMBOLIC_SCOPE.value = True
 
 
