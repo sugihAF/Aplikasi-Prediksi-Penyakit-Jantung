@@ -5,7 +5,6 @@ import keras
 from tensorflow.keras.models import Sequential #used to initialize our ANN
 from tensorflow.keras.layers import Dense #used to make layers in ANN
 from tensorflow.keras.layers import Dropout
-tb._SYMBOLIC_SCOPE.value = True
 
 
 @st.cache(allow_output_mutation=True)
