@@ -6,7 +6,7 @@ from tensorflow.keras.models import Sequential #used to initialize our ANN
 from tensorflow.keras.layers import Dense #used to make layers in ANN
 from tensorflow.keras.layers import Dropout
 
-@st.cache(suppress_st_warning=True)
+@st.cache(suppress_st_warning=True, allow_output_mutation=True)
 def loadData():
 	dataset = pd.read_csv('cleveland.csv')
 	return dataset
@@ -29,7 +29,7 @@ def preprocessing(dataset):
     return X_train,X_test,y_train,y_test
 
 # Training Neural Network for Classification.
-@st.cache(suppress_st_warning=True)
+@st.cache(suppress_st_warning=True, allow_output_mutation=True)
 def neuralNet(X_train, X_test, y_train, y_test):
     from sklearn.preprocessing import StandardScaler
     sc = StandardScaler()
